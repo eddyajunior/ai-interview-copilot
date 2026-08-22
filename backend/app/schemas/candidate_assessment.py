@@ -1,0 +1,85 @@
+from enum import Enum
+from typing import List
+from pydantic import BaseModel, Field
+
+
+class SkillType(str, Enum):
+    HARD_SKILL = "hard_skill"
+    SOFT_SKILL = "soft_skill"
+    TECHNOLOGY = "technology"
+
+
+class RiskLevel(str, Enum):
+    LOW = "low"
+    MEDIUM = "medium"
+    HIGH = "high"
+
+
+class ConfidenceLevel(str, Enum):
+    LOW = "low"
+    MEDIUM = "medium"
+    HIGH = "high"
+
+
+class SkillAssessment(BaseModel):
+    name: str
+    type: SkillType
+
+    score: int = Field(
+        ge=1,
+        le=5,
+        description="Nível de evidência encontrado no currículo em relação à vaga"
+    )
+
+    evidence: List[str] = Field(default_factory=list)
+
+    justification: str
+
+    confidence: ConfidenceLevel
+
+    status: str
+
+
+class InterviewQuestion(BaseModel):
+    category: str
+    competency: str
+    question: str
+    reason: str
+    follow_up: str | None = None
+    what_to_observe: List[str] = Field(default_factory=list)
+
+
+class RiskAssessment(BaseModel):
+    title: str
+    level: RiskLevel
+    description: str
+    evidence: List[str] = Field(default_factory=list)
+    validation_question: str | None = None
+
+
+class Recommendation(BaseModel):
+    short_term: str
+    medium_term: str
+    long_term: str
+
+
+class CandidateAssessment(BaseModel):
+    candidate_name: str | None = None
+    job_title: str
+
+    summary: str
+
+    strengths: List[str] = Field(default_factory=list)
+    weaknesses: List[str] = Field(default_factory=list)
+
+    hard_skills: List[SkillAssessment] = Field(default_factory=list)
+    soft_skills: List[SkillAssessment] = Field(default_factory=list)
+    technologies: List[SkillAssessment] = Field(default_factory=list)
+
+    questions: List[InterviewQuestion] = Field(default_factory=list)
+
+    risks: List[RiskAssessment] = Field(default_factory=list)
+
+    interviewer_comments: List[str] = Field(default_factory=list)
+
+    recommendation: Recommendation
