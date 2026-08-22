@@ -3,6 +3,7 @@ from app.schemas.job_profile import (
     JobProfile,
     JobRequirement,
     RequirementImportance,
+    SeniorityLevel,
 )
 
 
@@ -37,22 +38,39 @@ class JobAnalyzer:
         "autonomia": "Autonomia",
     }
 
-    def analyze(self, document: ParsedDocument) -> JobProfile:
+    def analyze(
+        self,
+        document: ParsedDocument,
+    ) -> JobProfile:
         if not document.content.strip():
-            raise ValueError("O conteúdo da vaga não pode estar vazio.")
+            raise ValueError(
+                "O conteúdo da vaga não pode estar vazio."
+            )
 
         content = document.content
         content_lower = content.lower()
 
         return JobProfile(
             title=self._identify_title(content),
-            seniority=self._identify_seniority(content_lower),
+            seniority=self._identify_seniority(
+                content_lower
+            ),
             summary=content,
-            technologies=self._identify_technologies(content_lower),
-            soft_skills=self._identify_soft_skills(content_lower),
+            hard_skills=[],
+            soft_skills=self._identify_soft_skills(
+                content_lower
+            ),
+            technologies=self._identify_technologies(
+                content_lower
+            ),
+            responsibilities=[],
+            differentiators=[],
         )
 
-    def _identify_title(self, content: str) -> str:
+    def _identify_title(
+        self,
+        content: str,
+    ) -> str:
         first_line = content.splitlines()[0].strip()
 
         if first_line:
@@ -60,17 +78,41 @@ class JobAnalyzer:
 
         return "Não identificado"
 
-    def _identify_seniority(self, content: str) -> str | None:
+    def _identify_seniority(
+        self,
+        content: str,
+    ) -> SeniorityLevel | None:
         seniority_terms = {
-            "junior": ["junior", "júnior", "jr"],
-            "mid": ["pleno", "mid-level", "mid level"],
-            "senior": ["senior", "sênior", "sr"],
-            "specialist": ["especialista", "specialist"],
-            "lead": ["tech lead", "technical lead"],
+            SeniorityLevel.JUNIOR: [
+                "junior",
+                "júnior",
+                "jr",
+            ],
+            SeniorityLevel.MID: [
+                "pleno",
+                "mid-level",
+                "mid level",
+            ],
+            SeniorityLevel.SENIOR: [
+                "senior",
+                "sênior",
+                "sr",
+            ],
+            SeniorityLevel.SPECIALIST: [
+                "especialista",
+                "specialist",
+            ],
+            SeniorityLevel.LEAD: [
+                "tech lead",
+                "technical lead",
+            ],
         }
 
         for seniority, terms in seniority_terms.items():
-            if any(term in content for term in terms):
+            if any(
+                term in content
+                for term in terms
+            ):
                 return seniority
 
         return None
@@ -86,7 +128,10 @@ class JobAnalyzer:
                 requirements.append(
                     JobRequirement(
                         name=technology,
-                        importance=RequirementImportance.REQUIRED,
+                        importance=(
+                            RequirementImportance.REQUIRED
+                        ),
+                        description=None,
                     )
                 )
 
@@ -99,18 +144,21 @@ class JobAnalyzer:
         requirements = []
 
         for term, skill_name in self.SOFT_SKILLS.items():
-            if term in content:
-                importance = (
-                    RequirementImportance.DESIRED
-                    if "diferencial" in content
-                    else RequirementImportance.REQUIRED
-                )
+            if term not in content:
+                continue
 
-                requirements.append(
-                    JobRequirement(
-                        name=skill_name,
-                        importance=importance,
-                    )
+            importance = (
+                RequirementImportance.DESIRED
+                if "diferencial" in content
+                else RequirementImportance.REQUIRED
+            )
+
+            requirements.append(
+                JobRequirement(
+                    name=skill_name,
+                    importance=importance,
+                    description=None,
                 )
+            )
 
         return requirements

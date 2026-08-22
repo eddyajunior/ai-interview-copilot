@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import List
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict
 
 
 class RequirementImportance(str, Enum):
@@ -10,21 +10,32 @@ class RequirementImportance(str, Enum):
     OPTIONAL = "optional"
 
 
+class SeniorityLevel(str, Enum):
+    JUNIOR = "junior"
+    MID = "mid"
+    SENIOR = "senior"
+    SPECIALIST = "specialist"
+    LEAD = "lead"
+
+
 class JobRequirement(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     name: str
     importance: RequirementImportance
-    description: str | None = None
+    description: str | None
 
 
 class JobProfile(BaseModel):
-    title: str
-    seniority: str | None = None
+    model_config = ConfigDict(extra="forbid")
 
+    title: str
+    seniority: SeniorityLevel | None
     summary: str
 
-    hard_skills: List[JobRequirement] = Field(default_factory=list)
-    soft_skills: List[JobRequirement] = Field(default_factory=list)
-    technologies: List[JobRequirement] = Field(default_factory=list)
+    hard_skills: List[JobRequirement]
+    soft_skills: List[JobRequirement]
+    technologies: List[JobRequirement]
 
-    responsibilities: List[str] = Field(default_factory=list)
-    differentiators: List[str] = Field(default_factory=list)
+    responsibilities: List[str]
+    differentiators: List[str]
