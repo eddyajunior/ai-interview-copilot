@@ -2,6 +2,8 @@ from enum import Enum
 from typing import List
 from pydantic import BaseModel, Field
 
+from app.schemas.evidence import Evidence
+
 
 class SkillType(str, Enum):
     HARD_SKILL = "hard_skill"
@@ -31,7 +33,7 @@ class SkillAssessment(BaseModel):
         description="Nível de evidência encontrado no currículo em relação à vaga"
     )
 
-    evidence: List[str] = Field(default_factory=list)
+    evidence: List[Evidence] = Field(default_factory=list)
 
     justification: str
 
@@ -53,7 +55,7 @@ class RiskAssessment(BaseModel):
     title: str
     level: RiskLevel
     description: str
-    evidence: List[str] = Field(default_factory=list)
+    evidence: List[Evidence] = Field(default_factory=list)
     validation_question: str | None = None
 
 

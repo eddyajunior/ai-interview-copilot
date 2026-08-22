@@ -1,3 +1,5 @@
+from app.schemas.evidence import Evidence, EvidenceSource
+
 from app.schemas.resume_profile import (
     ResumeCertification,
     ResumeEducation,
@@ -10,7 +12,9 @@ from app.schemas.resume_profile import (
 def test_resume_profile_valid():
     resume = ResumeProfile(
         candidate_name="João Silva",
-        professional_summary="Engenheiro de software com experiência em sistemas distribuídos.",
+        professional_summary=(
+            "Engenheiro de software com experiência em sistemas distribuídos."
+        ),
         experiences=[
             ResumeExperience(
                 company="Empresa X",
@@ -48,7 +52,11 @@ def test_resume_profile_valid():
             ResumeSkillEvidence(
                 skill="Arquitetura de Software",
                 evidence=[
-                    "Participação em decisões arquiteturais",
+                    Evidence(
+                        text="Participação em decisões arquiteturais",
+                        source=EvidenceSource.EXPERIENCE,
+                        source_reference="Senior Software Engineer - Empresa X",
+                    )
                 ],
             )
         ],
@@ -56,7 +64,11 @@ def test_resume_profile_valid():
             ResumeSkillEvidence(
                 skill="Kafka",
                 evidence=[
-                    "Utilização em arquitetura de microsserviços",
+                    Evidence(
+                        text="Utilização em arquitetura de microsserviços",
+                        source=EvidenceSource.EXPERIENCE,
+                        source_reference="Senior Software Engineer - Empresa X",
+                    )
                 ],
             )
         ],
@@ -72,3 +84,4 @@ def test_resume_profile_valid():
     assert resume.experiences[0].role == "Senior Software Engineer"
     assert "Kafka" in resume.experiences[0].technologies
     assert resume.technologies[0].skill == "Kafka"
+    assert resume.technologies[0].evidence[0].source == EvidenceSource.EXPERIENCE

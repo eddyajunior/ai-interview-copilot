@@ -2,6 +2,8 @@ from typing import List
 
 from pydantic import BaseModel, Field
 
+from app.schemas.evidence import Evidence
+
 
 class ResumeExperience(BaseModel):
     company: str | None = None
@@ -29,7 +31,7 @@ class ResumeCertification(BaseModel):
 
 class ResumeSkillEvidence(BaseModel):
     skill: str
-    evidence: List[str] = Field(default_factory=list)
+    evidence: List[Evidence] = Field(default_factory=list)
 
 
 class ResumeProfile(BaseModel):

@@ -7,6 +7,7 @@ from app.schemas.candidate_assessment import (
     SkillType,
     ConfidenceLevel,
 )
+from app.schemas.evidence import Evidence, EvidenceSource
 
 
 def test_candidate_assessment_valid():
@@ -21,7 +22,13 @@ def test_candidate_assessment_valid():
                 name="Java",
                 type=SkillType.HARD_SKILL,
                 score=5,
-                evidence=["8 anos de experiência com Java"],
+                evidence=[
+                    Evidence(
+                        text="8 anos de experiência com Java",
+                        source=EvidenceSource.EXPERIENCE,
+                        source_reference="Senior Software Engineer - Empresa X",
+                    )
+                ],
                 justification="Experiência recorrente e diretamente relacionada à vaga.",
                 confidence=ConfidenceLevel.HIGH,
                 status="aderente",
@@ -36,6 +43,7 @@ def test_candidate_assessment_valid():
 
     assert assessment.job_title == "Senior Software Engineer"
     assert assessment.hard_skills[0].score == 5
+    assert assessment.hard_skills[0].evidence[0].source == EvidenceSource.EXPERIENCE
 
 
 def test_skill_score_cannot_exceed_five():
