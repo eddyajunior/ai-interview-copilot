@@ -1,4 +1,5 @@
 from pathlib import Path
+from docx import Document
 
 from app.schemas.document import DocumentType, ParsedDocument
 
@@ -33,6 +34,13 @@ class DocumentParser:
 
         if document_type == DocumentType.TXT:
             content = self._parse_txt(path)
+
+        elif document_type == DocumentType.PDF:
+            content = self._parse_pdf(path)
+
+        elif document_type == DocumentType.DOCX:
+            content = self._parse_docx(path)
+
         else:
             raise NotImplementedError(
                 f"Parser para {document_type.value} ainda não implementado."
@@ -65,3 +73,14 @@ class DocumentParser:
         ]
 
         return "\n".join(lines)
+
+    def _parse_docx(self, path: Path) -> str:
+        document = Document(path)
+
+        paragraphs = [
+            paragraph.text
+            for paragraph in document.paragraphs
+            if paragraph.text.strip()
+        ]
+
+        return "\n".join(paragraphs)

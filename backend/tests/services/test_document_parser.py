@@ -1,3 +1,4 @@
+from docx import Document
 import pytest
 
 from app.schemas.document import DocumentType
@@ -6,6 +7,27 @@ from app.services.document_parser import (
     UnsupportedDocumentTypeError,
 )
 
+def test_parse_docx_document(tmp_path):
+    file = tmp_path / "curriculo.docx"
+
+    doc = Document()
+    doc.add_paragraph("João Silva")
+    doc.add_paragraph("Senior Software Engineer")
+    doc.add_paragraph("Java")
+    doc.add_paragraph("AWS")
+    doc.add_paragraph("Kafka")
+    doc.save(file)
+
+    parser = DocumentParser()
+
+    document = parser.parse(file)
+
+    assert document.filename == "curriculo.docx"
+    assert document.document_type == DocumentType.DOCX
+    assert "João Silva" in document.content
+    assert "Senior Software Engineer" in document.content
+    assert "Kafka" in document.content
+    assert document.character_count > 0
 
 def test_parse_txt_document(tmp_path):
     file = tmp_path / "curriculo.txt"
