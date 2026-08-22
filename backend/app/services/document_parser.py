@@ -1,8 +1,13 @@
+import fitz
+
 from pathlib import Path
 from docx import Document
 
-from app.schemas.document import DocumentType, ParsedDocument
-
+from app.schemas.document import (
+    DocumentPage,
+    DocumentType,
+    ParsedDocument,
+)
 
 class UnsupportedDocumentTypeError(Exception):
     pass
@@ -33,31 +38,40 @@ class DocumentParser:
         document_type = self.SUPPORTED_TYPES[extension]
 
         if document_type == DocumentType.TXT:
-            content = self._parse_txt(path)
+            pages = self._parse_txt(path)
 
         elif document_type == DocumentType.PDF:
-            content = self._parse_pdf(path)
+            pages = self._parse_pdf(path)
 
         elif document_type == DocumentType.DOCX:
-            content = self._parse_docx(path)
+            pages = self._parse_docx(path)
 
         else:
             raise NotImplementedError(
                 f"Parser para {document_type.value} ainda não implementado."
             )
 
-        content = self._normalize_text(content)
+        normalized_pages = [
+            DocumentPage(
+                number=page.number,
+                content=self._normalize_text(page.content),
+            )
+            for page in pages
+        ]
+
+        content = "\n".join(
+            page.content
+            for page in normalized_pages
+            if page.content
+        )
 
         return ParsedDocument(
             filename=path.name,
             document_type=document_type,
             content=content,
             character_count=len(content),
-        )
-
-    def _parse_txt(self, path: Path) -> str:
-        return path.read_text(
-            encoding="utf-8"
+            page_count=len(normalized_pages),
+            pages=normalized_pages,
         )
 
     def _normalize_text(self, text: str) -> str:
@@ -74,13 +88,66 @@ class DocumentParser:
 
         return "\n".join(lines)
 
-    def _parse_docx(self, path: Path) -> str:
+    def parse_text(
+        self,
+        text: str,
+        source_name: str = "texto_colado",
+    ) -> ParsedDocument:
+        if not text or not text.strip():
+            raise ValueError("O texto informado não pode estar vazio.")
+
+        normalized_content = self._normalize_text(text)
+
+        page = DocumentPage(
+            number=1,
+            content=normalized_content,
+        )
+
+        return ParsedDocument(
+            filename=source_name,
+            document_type=DocumentType.RAW_TEXT,
+            content=normalized_content,
+            character_count=len(normalized_content),
+            page_count=1,
+            pages=[page],
+        )
+
+    def _parse_txt(self, path: Path) -> list[DocumentPage]:
+        content = path.read_text(encoding="utf-8")
+
+        return [
+            DocumentPage(
+                number=1,
+                content=content,
+            )
+        ]
+
+    def _parse_pdf(self, path: Path) -> list[DocumentPage]:
+        pages = []
+
+        with fitz.open(path) as document:
+            for index, page in enumerate(document):
+                pages.append(
+                    DocumentPage(
+                        number=index + 1,
+                        content=page.get_text(),
+                    )
+                )
+
+        return pages
+
+    def _parse_docx(self, path: Path) -> list[DocumentPage]:
         document = Document(path)
 
-        paragraphs = [
+        content = "\n".join(
             paragraph.text
             for paragraph in document.paragraphs
             if paragraph.text.strip()
-        ]
+        )
 
-        return "\n".join(paragraphs)
+        return [
+            DocumentPage(
+                number=1,
+                content=content,
+            )
+        ]
