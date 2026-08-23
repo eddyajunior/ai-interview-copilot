@@ -1,4 +1,4 @@
-import fitz
+import pymupdf
 import pytest
 
 from docx import Document
@@ -66,7 +66,7 @@ def test_unsupported_document_type(tmp_path):
 def test_parse_pdf_document(tmp_path):
     file = tmp_path / "curriculo.pdf"
 
-    pdf = fitz.open()
+    pdf = pymupdf.open()
 
     page = pdf.new_page()
 
@@ -99,7 +99,7 @@ def test_parse_pdf_document(tmp_path):
 def test_parse_multi_page_pdf(tmp_path):
     file = tmp_path / "curriculo_multiplas_paginas.pdf"
 
-    pdf = fitz.open()
+    pdf = pymupdf.open()
 
     page_one = pdf.new_page()
     page_one.insert_text(
