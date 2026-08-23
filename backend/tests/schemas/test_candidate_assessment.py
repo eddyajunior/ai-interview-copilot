@@ -27,6 +27,7 @@ def test_candidate_assessment_valid():
                         text="8 anos de experiência com Java",
                         source=EvidenceSource.EXPERIENCE,
                         source_reference="Senior Software Engineer - Empresa X",
+                        page=None,
                     )
                 ],
                 justification="Experiência recorrente e diretamente relacionada à vaga.",

@@ -1,6 +1,6 @@
 from enum import Enum
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class EvidenceSource(str, Enum):
@@ -14,8 +14,10 @@ class EvidenceSource(str, Enum):
 
 
 class Evidence(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     text: str
     source: EvidenceSource
 
-    source_reference: str | None = None
-    page: int | None = None
+    source_reference: str | None
+    page: int | None

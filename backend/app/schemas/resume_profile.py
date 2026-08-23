@@ -1,50 +1,62 @@
 from typing import List
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict
 
 from app.schemas.evidence import Evidence
 
 
 class ResumeExperience(BaseModel):
-    company: str | None = None
-    role: str
-    start_date: str | None = None
-    end_date: str | None = None
+    model_config = ConfigDict(extra="forbid")
 
-    responsibilities: List[str] = Field(default_factory=list)
-    achievements: List[str] = Field(default_factory=list)
-    technologies: List[str] = Field(default_factory=list)
+    company: str | None
+    role: str
+
+    start_date: str | None
+    end_date: str | None
+
+    responsibilities: List[str]
+    achievements: List[str]
+    technologies: List[str]
 
 
 class ResumeEducation(BaseModel):
-    institution: str | None = None
+    model_config = ConfigDict(extra="forbid")
+
+    institution: str | None
     course: str
-    level: str | None = None
-    completion_date: str | None = None
+
+    level: str | None
+    completion_date: str | None
 
 
 class ResumeCertification(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     name: str
-    issuer: str | None = None
-    date: str | None = None
+    issuer: str | None
+    date: str | None
 
 
 class ResumeSkillEvidence(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     skill: str
-    evidence: List[Evidence] = Field(default_factory=list)
+    evidence: List[Evidence]
 
 
 class ResumeProfile(BaseModel):
-    candidate_name: str | None = None
-    professional_summary: str | None = None
+    model_config = ConfigDict(extra="forbid")
 
-    experiences: List[ResumeExperience] = Field(default_factory=list)
-    education: List[ResumeEducation] = Field(default_factory=list)
-    certifications: List[ResumeCertification] = Field(default_factory=list)
+    candidate_name: str | None
+    professional_summary: str | None
 
-    hard_skills: List[ResumeSkillEvidence] = Field(default_factory=list)
-    soft_skill_evidences: List[ResumeSkillEvidence] = Field(default_factory=list)
-    technologies: List[ResumeSkillEvidence] = Field(default_factory=list)
+    experiences: List[ResumeExperience]
+    education: List[ResumeEducation]
+    certifications: List[ResumeCertification]
 
-    leadership_evidences: List[str] = Field(default_factory=list)
-    measurable_results: List[str] = Field(default_factory=list)
+    hard_skills: List[ResumeSkillEvidence]
+    soft_skill_evidences: List[ResumeSkillEvidence]
+    technologies: List[ResumeSkillEvidence]
+
+    leadership_evidences: List[str]
+    measurable_results: List[str]
