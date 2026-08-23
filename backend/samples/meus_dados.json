@@ -1,0 +1,1011 @@
+{
+  "candidate_name": "Nome Ficticio",
+  "professional_summary": "Líder de Engenharia de Software com trajetória em pagamentos, PIX e plataformas digitais de missão crítica. Experiência na gestão estratégica e operacional de times, integração entre tecnologia e negócio, modernização de legados, arquitetura distribuída e execução regulatória. Histórico de redução recorrente de aproximadamente 30% nos custos de cloud - economia superior a R$ 5,7 milhões por ano - além de atuação em iniciativas globais Brasil-Espanha e entregas regulatórias do Bacen.",
+  "experiences": [
+    {
+      "company": "Getnet Platforms",
+      "role": "Engineering Leader/Manager",
+      "start_date": "ago/2026",
+      "end_date": "atual",
+      "responsibilities": [
+        "Responsável por roadmap, priorização baseada em valor e gestão orçamentária de tecnologia.",
+        "Desenvolvimento de talentos por meio de 1:1, PDIs e feedback contínuo, com interface entre negócio e stakeholders executivos.",
+        "Atuação em pagamentos, PIX, iniciativas críticas, regulatórias e de escala global."
+      ],
+      "achievements": [],
+      "technologies": [
+        "AWS",
+        "Kafka",
+        "Java",
+        "Arquitetura distribuída"
+      ]
+    },
+    {
+      "company": "F1RST Digital Services",
+      "role": "Engineering Leader/Manager",
+      "start_date": "nov/2023",
+      "end_date": "jul/2026",
+      "responsibilities": [
+        "Liderança de engenharia em pagamentos e PIX, com responsabilidade por iniciativas regulatórias, globais, estabilidade operacional e eficiência financeira.",
+        "Evolução da eficiência operacional de CTB/RTB, com foco em estabilidade, previsibilidade e alinhamento entre estratégia e execução."
+      ],
+      "achievements": [
+        "Liderou o projeto regulatório MED (Bacen), garantindo conformidade e entrega dentro dos prazos críticos.",
+        "Conduziu iniciativa global Brasil-Espanha para meios de pagamento, promovendo integração e escalabilidade.",
+        "Reduziu custos cloud em aproximadamente 30%, superando R$ 5,7 milhões/ano em economia recorrente com práticas de FinOps.",
+        "Criou dashboards executivos no Cloudability, ampliando visibilidade financeira e suporte à tomada de decisão."
+      ],
+      "technologies": [
+        "PIX",
+        "Cloud",
+        "FinOps",
+        "Cloudability",
+        "Bacen MED"
+      ]
+    },
+    {
+      "company": "Casas Bahia Tecnologia",
+      "role": "Software Engineering Leader",
+      "start_date": "ago/2021",
+      "end_date": "nov/2023",
+      "responsibilities": [
+        "Liderança técnica e de pessoas em múltiplas squads de Plataforma, Sustentação e Produtos.",
+        "Conectou estratégia e tecnologia por meio de roadmaps, planejamento trimestral, OKRs e métricas de engenharia.",
+        "Liderou modernização e estabilização de sistemas legados críticos.",
+        "Implantou práticas ágeis e decisões orientadas a dados."
+      ],
+      "achievements": [
+        "Estruturou times de alta performance, fortalecendo ownership, segurança psicológica, autonomia e melhoria contínua.",
+        "Obteve ganhos de performance, escalabilidade e confiabilidade na modernização e estabilização de sistemas legados críticos.",
+        "Aumentou previsibilidade, eficiência e qualidade das entregas com práticas ágeis e decisões orientadas a dados."
+      ],
+      "technologies": [
+        "Sistemas legados",
+        "OKRs",
+        "Métricas de engenharia"
+      ]
+    },
+    {
+      "company": "Dotz Inc.",
+      "role": "Tech Lead",
+      "start_date": "mar/2019",
+      "end_date": "ago/2021",
+      "responsibilities": [
+        "Referência técnica de squads de Sustentação, Integrações e Onboarding, com foco em arquitetura, integrações e entrega contínua de valor.",
+        "Liderou integrações com Stone, Lio, Premmia, Salesforce, Big Data Corp e Twilio.",
+        "Evoluiu o onboarding da Conta Digital e definiu padrões de APIs .NET Core."
+      ],
+      "achievements": [
+        "Conduziu força-tarefa que eliminou 100% dos bugs priorizados pelo negócio B2B e elevou a confiabilidade da plataforma.",
+        "Reduziu retrabalho e ampliou a robustez com a definição de padrões de APIs .NET Core."
+      ],
+      "technologies": [
+        "Arquitetura",
+        "Integrações",
+        "Salesforce",
+        "Big Data Corp",
+        "Twilio",
+        ".NET Core",
+        "APIs"
+      ]
+    },
+    {
+      "company": "Grupo Casas Bahia",
+      "role": "Senior Developer Analyst",
+      "start_date": "ago/2017",
+      "end_date": "fev/2019",
+      "responsibilities": [
+        "Atuação em integrações de pagamentos e e-commerce, sustentação, gestão de mudanças e entregas para parceiros como HP, Fujifilm e GoToShop."
+      ],
+      "achievements": [],
+      "technologies": [
+        "Integrações de pagamentos",
+        "E-commerce"
+      ]
+    },
+    {
+      "company": "AASP - Associação dos Advogados de São Paulo",
+      "role": "Senior Developer Analyst",
+      "start_date": "jan/2015",
+      "end_date": "jun/2017",
+      "responsibilities": [
+        "Desenvolvimento, evolução e sustentação de sistemas corporativos, incluindo CRM e soluções de tratamento de publicações."
+      ],
+      "achievements": [],
+      "technologies": [
+        "CRM"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "FIAP",
+      "course": "Tech Strategic IT Leadership, Liderança Executiva",
+      "level": "MBA",
+      "completion_date": "abr/2026 - fev/2027 (em andamento)"
+    },
+    {
+      "institution": "Universidade Presbiteriana Mackenzie",
+      "course": "Gestão de Tecnologia da Informação",
+      "level": "MBA",
+      "completion_date": "2021 - 2022"
+    },
+    {
+      "institution": "Universidade Paulista",
+      "course": "Engenharia de Software",
+      "level": "MBA",
+      "completion_date": "2015 - 2016"
+    },
+    {
+      "institution": "Universidade Nove de Julho",
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "completion_date": "2010 - 2012"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect - Associate",
+      "issuer": "AWS"
+    },
+    {
+      "name": "AWS Certified AI Practitioner",
+      "issuer": "AWS"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "AWS"
+    },
+    {
+      "name": "Programa de Mentoria Bússola Executiva"
+    }
+  ],
+  "hard_skills": [
+    {
+      "skill": "FinOps",
+      "evidence": [
+        {
+          "text": "Reduziu custos cloud em aproximadamente 30%, superando R$ 5,7 milhões/ano em economia recorrente com práticas de FinOps.",
+          "source": "experience",
+          "source_reference": "F1RST Digital Services — Experiência Profissional"
+        },
+        {
+          "text": "FinOps: redução recorrente de ~30% nos custos de cloud, com economia superior a R$ 5,7 milhões/ano.",
+          "source": "professional_summary",
+          "source_reference": "Destaques de Impacto"
+        }
+      ]
+    },
+    {
+      "skill": "Gestão orçamentária de tecnologia",
+      "evidence": [
+        {
+          "text": "Responsável por roadmap, priorização baseada em valor e gestão orçamentária de tecnologia.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Arquitetura distribuída",
+      "evidence": [
+        {
+          "text": "Contexto tecnológico: AWS, Kafka, Java e arquitetura distribuída em ambiente bancário de missão crítica.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Experiência Profissional"
+        },
+        {
+          "text": "modernização de legados, arquitetura distribuída e execução regulatória.",
+          "source": "professional_summary",
+          "source_reference": "Resumo Executivo"
+        }
+      ]
+    },
+    {
+      "skill": "Pagamentos e PIX",
+      "evidence": [
+        {
+          "text": "Liderança de engenharia em pagamentos e PIX, com responsabilidade por iniciativas regulatórias, globais, estabilidade operacional e eficiência financeira.",
+          "source": "experience",
+          "source_reference": "F1RST Digital Services — Experiência Profissional"
+        },
+        {
+          "text": "Integrações de pagamentos e e-commerce, sustentação, gestão de mudanças e entregas para parceiros como HP, Fujifilm e GoToShop.",
+          "source": "experience",
+          "source_reference": "Grupo Casas Bahia — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Modernização e estabilização de sistemas legados",
+      "evidence": [
+        {
+          "text": "Liderou modernização e estabilização de sistemas legados críticos, com ganhos de performance, escalabilidade e confiabilidade.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "APIs",
+      "evidence": [
+        {
+          "text": "Evoluiu o onboarding da Conta Digital e definiu padrões de APIs .NET Core, reduzindo retrabalho e ampliando robustez.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Conformidade regulatória",
+      "evidence": [
+        {
+          "text": "Liderou o projeto regulatório MED (Bacen), garantindo conformidade e entrega dentro dos prazos críticos.",
+          "source": "experience",
+          "source_reference": "F1RST Digital Services — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "OKRs e métricas de engenharia",
+      "evidence": [
+        {
+          "text": "Conectou estratégia e tecnologia por meio de roadmaps, planejamento trimestral, OKRs e métricas de engenharia.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Experiência Profissional"
+        }
+      ]
+    }
+  ],
+  "soft_skill_evidences": [
+    {
+      "skill": "Liderança de pessoas",
+      "evidence": [
+        {
+          "text": "Liderança técnica e de pessoas em múltiplas squads de Plataforma, Sustentação e Produtos.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Desenvolvimento de talentos",
+      "evidence": [
+        {
+          "text": "Desenvolvimento de talentos por meio de 1:1, PDIs e feedback contínuo.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Comunicação com stakeholders executivos",
+      "evidence": [
+        {
+          "text": "Interface entre negócio e stakeholders executivos.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Colaboração entre tecnologia e negócio",
+      "evidence": [
+        {
+          "text": "Conectou estratégia e tecnologia por meio de roadmaps, planejamento trimestral, OKRs e métricas de engenharia.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Autonomia e ownership",
+      "evidence": [
+        {
+          "text": "Estruturou times de alta performance, fortalecendo ownership, segurança psicológica, autonomia e melhoria contínua.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Tomada de decisão orientada a dados",
+      "evidence": [
+        {
+          "text": "Implantou práticas ágeis e decisões orientadas a dados, aumentando previsibilidade, eficiência e qualidade das entregas.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Experiência Profissional"
+        }
+      ]
+    }
+  ],
+  "technologies": [
+    {
+      "skill": "AWS",
+      "evidence": [
+        {
+          "text": "Contexto tecnológico: AWS, Kafka, Java e arquitetura distribuída em ambiente bancário de missão crítica.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Experiência Profissional"
+        },
+        {
+          "text": "Certificações: AWS Certified Solutions Architect - Associate; AWS Certified AI Practitioner; AWS Certified Cloud Practitioner.",
+          "source": "certification",
+          "source_reference": "Certificações, Competências e Idiomas"
+        }
+      ]
+    },
+    {
+      "skill": "Kafka",
+      "evidence": [
+        {
+          "text": "Contexto tecnológico: AWS, Kafka, Java e arquitetura distribuída em ambiente bancário de missão crítica.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Java",
+      "evidence": [
+        {
+          "text": "Contexto tecnológico: AWS, Kafka, Java e arquitetura distribuída em ambiente bancário de missão crítica.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Cloudability",
+      "evidence": [
+        {
+          "text": "Criou dashboards executivos no Cloudability, ampliando visibilidade financeira e suporte à tomada de decisão.",
+          "source": "experience",
+          "source_reference": "F1RST Digital Services — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": ".NET Core",
+      "evidence": [
+        {
+          "text": "Evoluiu o onboarding da Conta Digital e definiu padrões de APIs .NET Core, reduzindo retrabalho e ampliando robustez.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Salesforce",
+      "evidence": [
+        {
+          "text": "Liderou integrações com Stone, Lio, Premmia, Salesforce, Big Data Corp e Twilio, assegurando escala, compliance e resiliência.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "Twilio",
+      "evidence": [
+        {
+          "text": "Liderou integrações com Stone, Lio, Premmia, Salesforce, Big Data Corp e Twilio, assegurando escala, compliance e resiliência.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "CRM",
+      "evidence": [
+        {
+          "text": "Desenvolvimento, evolução e sustentação de sistemas corporativos, incluindo CRM e soluções de tratamento de publicações.",
+          "source": "experience",
+          "source_reference": "AASP - Associação dos Advogados de São Paulo — Experiência Profissional"
+        }
+      ]
+    },
+    {
+      "skill": "APIs",
+      "evidence": [
+        {
+          "text": "Evoluiu o onboarding da Conta Digital e definiu padrões de APIs .NET Core, reduzindo retrabalho e ampliando robustez.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Experiência Profissional"
+        }
+      ]
+    }
+  ],
+  "leadership_evidences": [
+    "Liderança de engenharia em pagamentos e PIX, com responsabilidade por iniciativas regulatórias, globais, estabilidade operacional e eficiência financeira.",
+    "Liderança técnica e de pessoas em múltiplas squads de Plataforma, Sustentação e Produtos.",
+    "Responsável por roadmap, priorização baseada em valor e gestão orçamentária de tecnologia.",
+    "Desenvolvimento de talentos por meio de 1:1, PDIs e feedback contínuo."
+  ],
+  "measurable_results": [
+    "Redução recorrente de aproximadamente 30% nos custos de cloud.",
+    "Economia superior a R$ 5,7 milhões por ano em custos de cloud.",
+    "Eliminação de 100% dos bugs priorizados pelo negócio B2B.",
+    "Ganhos de performance, escalabilidade e confiabilidade na modernização e estabilização de sistemas legados críticos.",
+    "Aumento de previsibilidade, eficiência e qualidade das entregas com práticas ágeis e decisões orientadas a dados."
+  ]
+}
+(.venv) C:\projetos\ai-interview-copilot\backend [feature/0.3.0-candidate-scoring +5 ~0 -0 !]> python -m pytest tests\services\test_ai_resume_analyzer.py -v
+======================================================= test session starts ========================================================
+platform win32 -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0 -- C:\projetos\ai-interview-copilot\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\projetos\ai-interview-copilot\backend
+plugins: anyio-4.14.2
+collected 2 items
+
+tests/services/test_ai_resume_analyzer.py::test_ai_resume_analyzer_returns_resume_profile PASSED                              [ 50%]
+tests/services/test_ai_resume_analyzer.py::test_build_document_with_pages_preserves_page_numbers PASSED                       [100%]
+
+======================================================== 2 passed in 1.18s =========================================================
+(.venv) C:\projetos\ai-interview-copilot\backend [feature/0.3.0-candidate-scoring +5 ~0 -0 !]> python -m pytest
+======================================================= test session starts ========================================================
+platform win32 -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\projetos\ai-interview-copilot\backend
+plugins: anyio-4.14.2
+collected 22 items
+
+tests\schemas\test_candidate_assessment.py ..                                                                                 [  9%]
+tests\schemas\test_evidence.py .                                                                                              [ 13%]
+tests\schemas\test_job_profile.py ...                                                                                         [ 27%]
+tests\schemas\test_resume_profile.py .                                                                                        [ 31%]
+tests\services\test_ai_client.py ..                                                                                           [ 40%]
+tests\services\test_ai_job_analyzer.py .                                                                                      [ 45%]
+tests\services\test_ai_resume_analyzer.py ..                                                                                  [ 54%]
+tests\services\test_document_parser.py ........                                                                               [ 90%]
+tests\services\test_job_analyzer.py ..                                                                                        [100%]
+
+======================================================== 22 passed in 2.31s ========================================================
+(.venv) C:\projetos\ai-interview-copilot\backend [feature/0.3.0-candidate-scoring +5 ~0 -0 !]> python -m scripts.test_real_resume_analysis
+{
+  "candidate_name": "Edson Amaral",
+  "professional_summary": "Líder de Engenharia de Software com trajetória em pagamentos, PIX e plataformas digitais de missão crítica. Experiência na gestão estratégica e operacional de times, integração entre tecnologia e negócio, modernização de legados, arquitetura distribuída e execução regulatória. Histórico de redução recorrente de aproximadamente 30% nos custos de cloud - economia superior a R$ 5,7 milhões por ano - além de atuação em iniciativas globais Brasil-Espanha e entregas regulatórias do Bacen.",
+  "experiences": [
+    {
+      "company": "Getnet Platforms",
+      "role": "Engineering Leader/Manager",
+      "start_date": "ago/2026",
+      "end_date": "atual",
+      "responsibilities": [
+        "Responsável por roadmap, priorização baseada em valor e gestão orçamentária de tecnologia.",
+        "Desenvolvimento de talentos por meio de 1:1, PDIs e feedback contínuo, com interface entre negócio e stakeholders executivos.",
+        "Atuação em pagamentos, PIX, iniciativas críticas, regulatórias e de escala global."
+      ],
+      "achievements": [],
+      "technologies": [
+        "AWS",
+        "Kafka",
+        "Java"
+      ]
+    },
+    {
+      "company": "F1RST Digital Services",
+      "role": "Engineering Leader/Manager",
+      "start_date": "nov/2023",
+      "end_date": "jul/2026",
+      "responsibilities": [
+        "Liderança de engenharia em pagamentos e PIX, com responsabilidade por iniciativas regulatórias, globais, estabilidade operacional e eficiência financeira.",
+        "Evolução da eficiência operacional de CTB/RTB, com foco em estabilidade, previsibilidade e alinhamento entre estratégia e execução."
+      ],
+      "achievements": [
+        "Liderou o projeto regulatório MED (Bacen), garantindo conformidade e entrega dentro dos prazos críticos.",
+        "Conduziu iniciativa global Brasil-Espanha para meios de pagamento, promovendo integração e escalabilidade.",
+        "Reduziu custos cloud em aproximadamente 30%, superando R$ 5,7 milhões/ano em economia recorrente com práticas de FinOps.",
+        "Criou dashboards executivos no Cloudability, ampliando visibilidade financeira e suporte à tomada de decisão."
+      ],
+      "technologies": [
+        "Cloudability"
+      ]
+    },
+    {
+      "company": "Casas Bahia Tecnologia",
+      "role": "Software Engineering Leader",
+      "start_date": "ago/2021",
+      "end_date": "nov/2023",
+      "responsibilities": [
+        "Liderança técnica e de pessoas em múltiplas squads de Plataforma, Sustentação e Produtos.",
+        "Conectou estratégia e tecnologia por meio de roadmaps, planejamento trimestral, OKRs e métricas de engenharia.",
+        "Implantou práticas ágeis e decisões orientadas a dados."
+      ],
+      "achievements": [
+        "Estruturou times de alta performance, fortalecendo ownership, segurança psicológica, autonomia e melhoria contínua.",
+        "Liderou modernização e estabilização de sistemas legados críticos, com ganhos de performance, escalabilidade e confiabilidade.",
+        "Aumentou previsibilidade, eficiência e qualidade das entregas por meio da implantação de práticas ágeis e decisões orientadas a dados."
+      ],
+      "technologies": []
+    },
+    {
+      "company": "Dotz Inc.",
+      "role": "Tech Lead",
+      "start_date": "mar/2019",
+      "end_date": "ago/2021",
+      "responsibilities": [
+        "Referência técnica de squads de Sustentação, Integrações e Onboarding, com foco em arquitetura, integrações e entrega contínua de valor.",
+        "Liderou integrações com Stone, Lio, Premmia, Salesforce, Big Data Corp e Twilio, assegurando escala, compliance e resiliência.",
+        "Evoluiu o onboarding da Conta Digital e definiu padrões de APIs .NET Core."
+      ],
+      "achievements": [
+        "Conduziu força-tarefa que eliminou 100% dos bugs priorizados pelo negócio B2B e elevou a confiabilidade da plataforma.",
+        "A definição de padrões de APIs .NET Core reduziu retrabalho e ampliou a robustez."
+      ],
+      "technologies": [
+        "Salesforce",
+        "Twilio",
+        ".NET Core"
+      ]
+    },
+    {
+      "company": "Grupo Casas Bahia",
+      "role": "Senior Developer Analyst",
+      "start_date": "ago/2017",
+      "end_date": "fev/2019",
+      "responsibilities": [
+        "Atuação em integrações de pagamentos e e-commerce, sustentação, gestão de mudanças e entregas para parceiros como HP, Fujifilm e GoToShop."
+      ],
+      "achievements": [],
+      "technologies": []
+    },
+    {
+      "company": "AASP - Associação dos Advogados de São Paulo",
+      "role": "Senior Developer Analyst",
+      "start_date": "jan/2015",
+      "end_date": "jun/2017",
+      "responsibilities": [
+        "Desenvolvimento, evolução e sustentação de sistemas corporativos, incluindo CRM e soluções de tratamento de publicações."
+      ],
+      "achievements": [],
+      "technologies": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "FIAP",
+      "course": "Tech Strategic IT Leadership, Liderança Executiva",
+      "level": "MBA",
+      "completion_date": "abr/2026 - fev/2027 (em andamento)"
+    },
+    {
+      "institution": "Universidade Presbiteriana Mackenzie",
+      "course": "Gestão de Tecnologia da Informação",
+      "level": "MBA",
+      "completion_date": "2021 - 2022"
+    },
+    {
+      "institution": "Universidade Paulista",
+      "course": "Engenharia de Software",
+      "level": "MBA",
+      "completion_date": "2015 - 2016"
+    },
+    {
+      "institution": "Universidade Nove de Julho",
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "completion_date": "2010 - 2012"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect - Associate",
+      "issuer": "AWS"
+    },
+    {
+      "name": "AWS Certified AI Practitioner",
+      "issuer": "AWS"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "AWS"
+    },
+    {
+      "name": "Programa de Mentoria Bússola Executiva"
+    }
+  ],
+  "hard_skills": [
+    {
+      "skill": "Liderança de engenharia",
+      "evidence": [
+        {
+          "text": "Líder de Engenharia de Software com trajetória em pagamentos, PIX e plataformas digitais de missão crítica.",
+          "source": "professional_summary",
+          "source_reference": "Resumo Executivo",
+          "page": 1
+        },
+        {
+          "text": "Competências: liderança de engenharia, gestão de pessoas, estratégia e execução, pagamentos/PIX, FinOps, AWS, Kafka, Java, .NET, arquitetura distribuída, APIs, modernização de legados, OKRs e gestão de stakeholders.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Gestão estratégica e operacional de times",
+      "evidence": [
+        {
+          "text": "Experiência na gestão estratégica e operacional de times, integração entre tecnologia e negócio, modernização de legados, arquitetura distribuída e execução regulatória.",
+          "source": "professional_summary",
+          "source_reference": "Resumo Executivo",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "skill": "Pagamentos e PIX",
+      "evidence": [
+        {
+          "text": "Líder de Engenharia de Software com trajetória em pagamentos, PIX e plataformas digitais de missão crítica.",
+          "source": "professional_summary",
+          "source_reference": "Resumo Executivo",
+          "page": 1
+        },
+        {
+          "text": "Competências: liderança de engenharia, gestão de pessoas, estratégia e execução, pagamentos/PIX.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "FinOps e otimização de custos de cloud",
+      "evidence": [
+        {
+          "text": "FinOps: redução recorrente de ~30% nos custos de cloud, com economia superior a R$ 5,7 milhões/ano.",
+          "source": "job_description",
+          "source_reference": "Destaques de Impacto",
+          "page": 1
+        },
+        {
+          "text": "Reduziu custos cloud em aproximadamente 30%, superando R$ 5,7 milhões/ano em economia recorrente com práticas de FinOps.",
+          "source": "experience",
+          "source_reference": "F1RST Digital Services — Engineering Leader/Manager",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "skill": "Arquitetura distribuída",
+      "evidence": [
+        {
+          "text": "Experiência na gestão estratégica e operacional de times, integração entre tecnologia e negócio, modernização de legados, arquitetura distribuída e execução regulatória.",
+          "source": "professional_summary",
+          "source_reference": "Resumo Executivo",
+          "page": 1
+        },
+        {
+          "text": "Competências: ... arquitetura distribuída, APIs, modernização de legados.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Modernização e estabilização de sistemas legados",
+      "evidence": [
+        {
+          "text": "Liderou modernização e estabilização de sistemas legados críticos, com ganhos de performance, escalabilidade e confiabilidade.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Software Engineering Leader",
+          "page": 2
+        },
+        {
+          "text": "Competências: ... modernização de legados.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Execução regulatória e conformidade",
+      "evidence": [
+        {
+          "text": "Regulação: liderança do projeto MED (Bacen), assegurando conformidade e entrega em prazo crítico.",
+          "source": "job_description",
+          "source_reference": "Destaques de Impacto",
+          "page": 1
+        },
+        {
+          "text": "Liderou o projeto regulatório MED (Bacen), garantindo conformidade e entrega dentro dos prazos críticos.",
+          "source": "experience",
+          "source_reference": "F1RST Digital Services — Engineering Leader/Manager",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "skill": "Roadmaps, priorização e planejamento",
+      "evidence": [
+        {
+          "text": "Responsável por roadmap, priorização baseada em valor e gestão orçamentária de tecnologia.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Engineering Leader/Manager",
+          "page": 1
+        },
+        {
+          "text": "Conectou estratégia e tecnologia por meio de roadmaps, planejamento trimestral, OKRs e métricas de engenharia.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Software Engineering Leader",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Gestão orçamentária de tecnologia",
+      "evidence": [
+        {
+          "text": "Responsável por roadmap, priorização baseada em valor e gestão orçamentária de tecnologia.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Engineering Leader/Manager",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "skill": "OKRs e métricas de engenharia",
+      "evidence": [
+        {
+          "text": "Conectou estratégia e tecnologia por meio de roadmaps, planejamento trimestral, OKRs e métricas de engenharia.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Software Engineering Leader",
+          "page": 2
+        },
+        {
+          "text": "Competências: ... OKRs e gestão de stakeholders.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Práticas ágeis e decisões orientadas a dados",
+      "evidence": [
+        {
+          "text": "Implantou práticas ágeis e decisões orientadas a dados, aumentando previsibilidade, eficiência e qualidade das entregas.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Software Engineering Leader",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Integrações de sistemas",
+      "evidence": [
+        {
+          "text": "Referência técnica de squads de Sustentação, Integrações e Onboarding, com foco em arquitetura, integrações e entrega contínua de valor.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Tech Lead",
+          "page": 2
+        },
+        {
+          "text": "Liderou integrações com Stone, Lio, Premmia, Salesforce, Big Data Corp e Twilio, assegurando escala, compliance e resiliência.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Tech Lead",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "APIs",
+      "evidence": [
+        {
+          "text": "Evoluiu o onboarding da Conta Digital e definiu padrões de APIs .NET Core, reduzindo retrabalho e ampliando robustez.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Tech Lead",
+          "page": 2
+        },
+        {
+          "text": "Competências: ... APIs.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Gestão de stakeholders",
+      "evidence": [
+        {
+          "text": "Competências: ... gestão de stakeholders.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        },
+        {
+          "text": "Desenvolvimento de talentos por meio de 1:1, PDIs e feedback contínuo, com interface entre negócio e stakeholders executivos.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Engineering Leader/Manager",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "skill": "Estabilidade operacional, escalabilidade e confiabilidade",
+      "evidence": [
+        {
+          "text": "Liderança de engenharia em pagamentos e PIX, com responsabilidade por iniciativas regulatórias, globais, estabilidade operacional e eficiência financeira.",
+          "source": "experience",
+          "source_reference": "F1RST Digital Services — Engineering Leader/Manager",
+          "page": 1
+        },
+        {
+          "text": "Liderou modernização e estabilização de sistemas legados críticos, com ganhos de performance, escalabilidade e confiabilidade.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Software Engineering Leader",
+          "page": 2
+        }
+      ]
+    }
+  ],
+  "soft_skill_evidences": [
+    {
+      "skill": "Gestão de pessoas",
+      "evidence": [
+        {
+          "text": "Competências: liderança de engenharia, gestão de pessoas, estratégia e execução, pagamentos/PIX, FinOps, AWS, Kafka, Java, .NET, arquitetura distribuída, APIs, modernização de legados, OKRs e gestão de stakeholders.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        },
+        {
+          "text": "Liderança técnica e de pessoas em múltiplas squads de Plataforma, Sustentação e Produtos.",
+          "source": "experience",
+          "source_reference": "Casas Bahia Tecnologia — Software Engineering Leader",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Desenvolvimento de talentos e feedback",
+      "evidence": [
+        {
+          "text": "Desenvolvimento de talentos por meio de 1:1, PDIs e feedback contínuo.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Engineering Leader/Manager",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "skill": "Gestão de stakeholders e interface executiva",
+      "evidence": [
+        {
+          "text": "Com interface entre negócio e stakeholders executivos.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Engineering Leader/Manager",
+          "page": 1
+        },
+        {
+          "text": "Competências: ... gestão de stakeholders.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    }
+  ],
+  "technologies": [
+    {
+      "skill": "AWS",
+      "evidence": [
+        {
+          "text": "Contexto tecnológico: AWS, Kafka, Java e arquitetura distribuída em ambiente bancário de missão crítica.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Engineering Leader/Manager",
+          "page": 1
+        },
+        {
+          "text": "Certificações: AWS Certified Solutions Architect - Associate; AWS Certified AI Practitioner; AWS Certified Cloud Practitioner.",
+          "source": "certification",
+          "source_reference": "Certificações",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Kafka",
+      "evidence": [
+        {
+          "text": "Contexto tecnológico: AWS, Kafka, Java e arquitetura distribuída em ambiente bancário de missão crítica.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Engineering Leader/Manager",
+          "page": 1
+        },
+        {
+          "text": "Competências: ... AWS, Kafka, Java.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Java",
+      "evidence": [
+        {
+          "text": "Contexto tecnológico: AWS, Kafka, Java e arquitetura distribuída em ambiente bancário de missão crítica.",
+          "source": "experience",
+          "source_reference": "Getnet Platforms — Engineering Leader/Manager",
+          "page": 1
+        },
+        {
+          "text": "Competências: ... AWS, Kafka, Java.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Cloudability",
+      "evidence": [
+        {
+          "text": "Criou dashboards executivos no Cloudability, ampliando visibilidade financeira e suporte à tomada de decisão.",
+          "source": "experience",
+          "source_reference": "F1RST Digital Services — Engineering Leader/Manager",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "skill": ".NET Core",
+      "evidence": [
+        {
+          "text": "Evoluiu o onboarding da Conta Digital e definiu padrões de APIs .NET Core, reduzindo retrabalho e ampliando robustez.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Tech Lead",
+          "page": 2
+        },
+        {
+          "text": "Competências: ... .NET.",
+          "source": "skill_section",
+          "source_reference": "Competências",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Salesforce",
+      "evidence": [
+        {
+          "text": "Liderou integrações com Stone, Lio, Premmia, Salesforce, Big Data Corp e Twilio, assegurando escala, compliance e resiliência.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Tech Lead",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "skill": "Twilio",
+      "evidence": [
+        {
+          "text": "Liderou integrações com Stone, Lio, Premmia, Salesforce, Big Data Corp e Twilio, assegurando escala, compliance e resiliência.",
+          "source": "experience",
+          "source_reference": "Dotz Inc. — Tech Lead",
+          "page": 2
+        }
+      ]
+    }
+  ],
+  "leadership_evidences": [
+    "Líder de Engenharia de Software com trajetória em pagamentos, PIX e plataformas digitais de missão crítica.",
+    "Responsável por roadmap, priorização baseada em valor e gestão orçamentária de tecnologia.",
+    "Desenvolvimento de talentos por meio de 1:1, PDIs e feedback contínuo, com interface entre negócio e stakeholders executivos.",
+    "Liderou o projeto regulatório MED (Bacen), garantindo conformidade e entrega dentro dos prazos críticos.",
+    "Conduziu iniciativa global Brasil-Espanha para meios de pagamento, promovendo integração e escalabilidade.",
+    "Liderança técnica e de pessoas em múltiplas squads de Plataforma, Sustentação e Produtos.",
+    "Estruturou times de alta performance, fortalecendo ownership, segurança psicológica, autonomia e melhoria contínua.",
+    "Referência técnica de squads de Sustentação, Integrações e Onboarding.",
+    "Conduziu força-tarefa que eliminou 100% dos bugs priorizados pelo negócio B2B."
+  ],
+  "measurable_results": [
+    "Redução recorrente de aproximadamente 30% nos custos de cloud.",
+    "Economia superior a R$ 5,7 milhões por ano em custos de cloud.",
+    "Redução de custos cloud em aproximadamente 30%, superando R$ 5,7 milhões/ano em economia recorrente.",
+    "Eliminação de 100% dos bugs priorizados pelo negócio B2B."
+  ]
+}
