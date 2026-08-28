@@ -40,12 +40,14 @@ def test_resume_profile_valid():
                 institution="Universidade X",
                 course="Ciência da Computação",
                 level="Bacharelado",
+                completion_date=None,
             )
         ],
         certifications=[
             ResumeCertification(
                 name="AWS Solutions Architect",
                 issuer="AWS",
+                date=None,
             )
         ],
         hard_skills=[
@@ -56,10 +58,12 @@ def test_resume_profile_valid():
                         text="Participação em decisões arquiteturais",
                         source=EvidenceSource.EXPERIENCE,
                         source_reference="Senior Software Engineer - Empresa X",
+                        page=None,
                     )
                 ],
             )
         ],
+        soft_skill_evidences=[],
         technologies=[
             ResumeSkillEvidence(
                 skill="Kafka",
@@ -68,6 +72,7 @@ def test_resume_profile_valid():
                         text="Utilização em arquitetura de microsserviços",
                         source=EvidenceSource.EXPERIENCE,
                         source_reference="Senior Software Engineer - Empresa X",
+                        page=None,
                     )
                 ],
             )

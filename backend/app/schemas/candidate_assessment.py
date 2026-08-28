@@ -85,3 +85,13 @@ class CandidateAssessment(BaseModel):
     interviewer_comments: List[str] = Field(default_factory=list)
 
     recommendation: Recommendation
+
+    adherence_percentage: float = Field(
+    default=0.0,
+    ge=0.0,
+    le=100.0,
+    description=(
+        "Percentual de aderência documental ponderada "
+        "entre currículo e requisitos da vaga"
+    ),
+)

@@ -1,4 +1,4 @@
-import fitz
+import pymupdf
 
 from pathlib import Path
 from docx import Document
@@ -125,7 +125,7 @@ class DocumentParser:
     def _parse_pdf(self, path: Path) -> list[DocumentPage]:
         pages = []
 
-        with fitz.open(path) as document:
+        with pymupdf.open(path) as document:
             for index, page in enumerate(document):
                 pages.append(
                     DocumentPage(
