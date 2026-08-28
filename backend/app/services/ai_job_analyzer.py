@@ -5,6 +5,9 @@ from app.schemas.document import ParsedDocument
 from app.schemas.job_profile import JobProfile
 from app.services.ai_client import AIClient
 
+from app.services.job_profile_normalizer import (
+    JobProfileNormalizer,
+)
 
 class AIJobAnalyzer:
     def __init__(self, ai_client: AIClient | None = None):
@@ -74,5 +77,14 @@ class AIJobAnalyzer:
 
         data = json.loads(response.output_text)
 
-        return JobProfile.model_validate(data)
+        job_profile = (
+           JobProfile.model_validate_json(
+                response.output_text
+            )
+        )
+
+        return (
+            JobProfileNormalizer()
+            .normalize(job_profile)
+        )
     

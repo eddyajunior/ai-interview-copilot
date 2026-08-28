@@ -1,0 +1,25 @@
+O desafioBuscamos uma pessoa para atuar como Gerente de Engenharia de Software – Chapter Tech Lead, liderando squads e chapters e conectando estratégia, excelência técnica e execução.Você será responsável por transformar prioridades do negócio em entregas de tecnologia relevantes, garantindo qualidade, eficiência, evolução das pessoas e resultados mensuráveis. Também atuará como elo entre Tecnologia, Produto, áreas de negócio e liderança executiva.Principais responsabilidadesEstratégia e liderança técnica
+
+Definir e executar a estratégia tecnológica do cluster, em linha com as diretrizes da organização.
+Traduzir necessidades do negócio em iniciativas priorizadas e viáveis.
+Garantir a aplicação de boas práticas de arquitetura, segurança, engenharia de software, cloud e FinOps.Gestão de squads, chapters e delivery
+Assegurar a entrega ponta a ponta de produtos e projetos, equilibrando prazo, qualidade e valor para o negócio.
+Gerenciar escopo, riscos, dependências, prioridades e capacidade dos times.
+Acompanhar indicadores de desempenho, produtividade, qualidade e eficiência da engenharia.
+Estimular a colaboração entre squads e chapters e remover obstáculos à execução.Gestão e desenvolvimento de pessoas
+Liderar e desenvolver engineers, tech leads e especialistas.
+Criar planos de carreira e desenvolvimento técnico, apoiando a formação de novas lideranças.
+Promover uma cultura de feedback, colaboração, autonomia, engajamento e alta performance.Excelência em engenharia e stakeholders
+Fortalecer práticas de Agile, DevOps, qualidade, automação e melhoria contínua.
+Promover padrões, frameworks e plataformas reutilizáveis.
+Orientar a evolução da arquitetura para soluções escaláveis, resilientes, observáveis e orientadas a eventos.
+Trabalhar próximo às áreas de negócio, Produto e liderança executiva, comunicando decisões, riscos e resultados com clareza.O que buscamosRequisitos essenciais
+Formação superior em Ciência da Computação, Engenharia, Tecnologia da Informação ou áreas correlatas.
+Experiência sólida em liderança técnica e gestão de times de engenharia de software.
+Histórico de gestão de projetos e delivery de soluções complexas.
+Conhecimento de arquitetura de software, desenvolvimento e ecossistemas tecnológicos, incluindo plataformas low-code/no-code.
+Vivência com metodologias ágeis, DevOps, qualidade de software e automação.
+Inglês avançado.Será um diferencial
+Experiência com microsserviços, arquitetura orientada a eventos, cloud e práticas de SRE.
+Vivência no setor financeiro ou em ambientes regulados.
+Experiência liderando transformações tecnológicas, modernização de plataformas ou evolução de modelos de engenharia.
