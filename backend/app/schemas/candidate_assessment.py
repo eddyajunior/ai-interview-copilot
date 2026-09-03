@@ -4,6 +4,12 @@ from pydantic import BaseModel, Field
 
 from app.schemas.evidence import Evidence
 
+from app.schemas.interview_intelligence import (
+    InterviewQuestion,
+)
+from app.schemas.risk_intelligence import (
+    RiskAssessment,
+)
 
 class SkillType(str, Enum):
     HARD_SKILL = "hard_skill"
@@ -11,10 +17,10 @@ class SkillType(str, Enum):
     TECHNOLOGY = "technology"
 
 
-class RiskLevel(str, Enum):
-    LOW = "low"
-    MEDIUM = "medium"
-    HIGH = "high"
+# class RiskLevel(str, Enum):
+#     LOW = "low"
+#     MEDIUM = "medium"
+#     HIGH = "high"
 
 
 class ConfidenceLevel(str, Enum):
@@ -42,21 +48,12 @@ class SkillAssessment(BaseModel):
     status: str
 
 
-class InterviewQuestion(BaseModel):
-    category: str
-    competency: str
-    question: str
-    reason: str
-    follow_up: str | None = None
-    what_to_observe: List[str] = Field(default_factory=list)
-
-
-class RiskAssessment(BaseModel):
-    title: str
-    level: RiskLevel
-    description: str
-    evidence: List[Evidence] = Field(default_factory=list)
-    validation_question: str | None = None
+    # class RiskAssessment(BaseModel):
+    #     title: str
+    #     level: RiskLevel
+    #     description: str
+    #     evidence: List[Evidence] = Field(default_factory=list)
+    #     validation_question: str | None = None
 
 
 class Recommendation(BaseModel):
