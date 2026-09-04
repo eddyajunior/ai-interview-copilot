@@ -1,214 +1,23 @@
 from pathlib import Path
 
-from app.services.ai_interview_question_generator import (
-    AIInterviewQuestionGenerator,
+from app.services.assessment_orchestrator import (
+    AssessmentOrchestrator,
 )
-from app.services.ai_job_analyzer import AIJobAnalyzer
-from app.services.ai_resume_analyzer import AIResumeAnalyzer
-from app.services.candidate_scorer import CandidateScorer
 from app.services.document_parser import DocumentParser
-from app.services.interview_focus_builder import (
-    InterviewFocusBuilder,
-)
-from app.services.interview_focus_selector import (
-    InterviewFocusSelector,
-)
-from app.services.interview_intelligence_service import (
-    InterviewIntelligenceService,
-)
-from app.services.risk_intelligence_service import (
-    RiskIntelligenceService,
-)
-from app.services.assessment_summary_service import (
-    AssessmentSummaryService,
-)
+
 
 BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = BASE_DIR / "data"
 
-JOB_FILE = BASE_DIR / "data" / "vaga.txt"
-RESUME_FILE = BASE_DIR / "data" / "curriculo.pdf"
+JOB_FILE = DATA_DIR / "vaga.txt"
+RESUME_FILE = DATA_DIR / "curriculo.pdf"
 
 
-def main():
-    parser = DocumentParser()
+def print_separator() -> None:
+    print("\n" + "=" * 70)
 
-    print("\n=== CARREGANDO DOCUMENTOS ===")
 
-    job_document = parser.parse(JOB_FILE)
-    resume_document = parser.parse(RESUME_FILE)
-
-    print(f"Vaga: {JOB_FILE.name}")
-    print(f"Currículo: {RESUME_FILE.name}")
-
-    print("\n=== ANALISANDO VAGA ===")
-
-    job_profile = AIJobAnalyzer().analyze(
-        job_document
-    )
-
-    print(f"Cargo: {job_profile.title}")
-
-    print("\n=== ANALISANDO CURRÍCULO ===")
-
-    resume_profile = AIResumeAnalyzer().analyze(
-        resume_document
-    )
-
-    print(
-        "Candidato:",
-        resume_profile.candidate_name,
-    )
-
-    print("\n=== GERANDO ASSESSMENT ===")
-
-    assessment = CandidateScorer().build_candidate_assessment(
-        job_profile,
-        resume_profile,
-    )
-
-    assessment = InterviewIntelligenceService().enrich(
-        assessment
-    )
-
-    assessment = RiskIntelligenceService().enrich(
-        assessment
-    )
-
-    assessment = AssessmentSummaryService().enrich(
-        assessment
-    )
-
-    print(
-        "\n=== PONTOS DE ATENÇÃO NO CANDIDATE ASSESSMENT ==="
-    )
-
-    print(
-        f"Riscos integrados: "
-        f"{len(assessment.risks)}"
-    )
-
-    for index, risk in enumerate(
-        assessment.risks,
-        start=1,
-    ):
-        print("\n" + "=" * 70)
-
-        print(
-            f"{index}. "
-            f"[{risk.level.value.upper()}] "
-            f"[{risk.category.value}]"
-        )
-
-        print(
-            f"Competência: "
-            f"{risk.competency}"
-        )
-
-        print(
-            f"Título: "
-            f"{risk.title}"
-        )
-
-        print(
-            f"Descrição: "
-            f"{risk.description}"
-        )
-
-        print(
-            f"Pergunta de validação: "
-            f"{risk.validation_question}"
-        )
-
-    print(
-        "Aderência documental:",
-        f"{assessment.adherence_percentage:.2f}%",
-    )
-
-    print("\n=== CONSTRUINDO FOCOS ===")
-
-    focuses = InterviewFocusBuilder().build(
-        assessment
-    )
-
-    print(
-        f"Focos disponíveis: {len(focuses)}"
-    )
-
-    print("\n=== SELECIONANDO FOCOS ===")
-
-    selected_focuses = (
-        InterviewFocusSelector()
-        .select(focuses)
-    )
-
-    print(
-        f"Focos selecionados: "
-        f"{len(selected_focuses)}"
-    )
-
-    for index, focus in enumerate(
-        selected_focuses,
-        start=1,
-    ):
-        print(
-            f"{index}. "
-            f"[{focus.priority.value.upper()}] "
-            f"[{focus.category.value}] "
-            f"{focus.competency} "
-            f"(score {focus.score}/5)"
-        )
-
-    print(
-        "\n=== GERANDO PERGUNTAS COM IA ==="
-    )
-
-    question_set = (
-        AIInterviewQuestionGenerator()
-        .generate(selected_focuses)
-    )
-
-    # print(
-    #     f"\nPerguntas geradas: "
-    #     f"{len(question_set.questions)}"
-    # )
-
-    # for index, question in enumerate(
-    #     question_set.questions,
-    #     start=1,
-    # ):
-    #     print("\n" + "=" * 70)
-
-    #     print(
-    #         f"{index}. "
-    #         f"[{question.priority.value.upper()}] "
-    #         f"[{question.category.value}]"
-    #     )
-
-    #     print(
-    #         f"Competência: "
-    #         f"{question.competency}"
-    #     )
-
-    #     print(
-    #         f"Pergunta: "
-    #         f"{question.question}"
-    #     )
-
-    #     print(
-    #         f"Motivo: "
-    #         f"{question.reason}"
-    #     )
-
-    #     print(
-    #         f"Follow-up: "
-    #         f"{question.follow_up}"
-    #     )
-
-    #     print("Observar:")
-
-    #     for item in question.what_to_observe:
-    #         print(f"  - {item}")
-
+def print_questions(assessment) -> None:
     print(
         "\n=== PERGUNTAS NO CANDIDATE ASSESSMENT ==="
     )
@@ -222,7 +31,7 @@ def main():
         assessment.questions,
         start=1,
     ):
-        print("\n" + "=" * 70)
+        print_separator()
 
         print(
             f"{index}. "
@@ -253,17 +62,67 @@ def main():
         print("Observar:")
 
         for item in question.what_to_observe:
-            print(f"  - {item}")
-            
-    print("\n" + "=" * 70)
+            print(
+                f"  - {item}"
+            )
 
+
+def print_risks(assessment) -> None:
     print(
-        "\n=== TESTE REAL CONCLUÍDO ==="
+        "\n=== PONTOS DE ATENÇÃO NO "
+        "CANDIDATE ASSESSMENT ==="
     )
 
+    print(
+        f"Riscos integrados: "
+        f"{len(assessment.risks)}"
+    )
+
+    for index, risk in enumerate(
+        assessment.risks,
+        start=1,
+    ):
+        print_separator()
+
+        print(
+            f"{index}. "
+            f"[{risk.level.value.upper()}] "
+            f"[{risk.category.value}]"
+        )
+
+        print(
+            f"Competência: "
+            f"{risk.competency}"
+        )
+
+        print(
+            f"Título: "
+            f"{risk.title}"
+        )
+
+        print(
+            f"Descrição: "
+            f"{risk.description}"
+        )
+
+        print(
+            f"Pergunta de validação: "
+            f"{risk.validation_question}"
+        )
+
+
+def print_interviewer_comments(
+    assessment,
+) -> None:
     print(
         "\n=== COMENTÁRIOS PARA O ENTREVISTADOR ==="
     )
+
+    if not assessment.interviewer_comments:
+        print(
+            "Nenhum comentário gerado."
+        )
+        return
 
     for index, comment in enumerate(
         assessment.interviewer_comments,
@@ -273,6 +132,10 @@ def main():
             f"{index}. {comment}"
         )
 
+
+def print_recommendation(
+    assessment,
+) -> None:
     print(
         "\n=== RECOMENDAÇÕES ==="
     )
@@ -293,6 +156,95 @@ def main():
     )
 
 
+def main() -> None:
+    print(
+        "\n=== CARREGANDO DOCUMENTOS ==="
+    )
+
+    print(
+        f"Vaga: {JOB_FILE.name}"
+    )
+
+    print(
+        f"Currículo: {RESUME_FILE.name}"
+    )
+
+    if not JOB_FILE.exists():
+        raise FileNotFoundError(
+            f"Arquivo da vaga não encontrado: "
+            f"{JOB_FILE}"
+        )
+
+    if not RESUME_FILE.exists():
+        raise FileNotFoundError(
+            f"Arquivo do currículo não encontrado: "
+            f"{RESUME_FILE}"
+        )
+
+    parser = DocumentParser()
+
+    job_document = parser.parse(
+        JOB_FILE
+    )
+
+    resume_document = parser.parse(
+        RESUME_FILE
+    )
+
+    print(
+        "\n=== GERANDO ASSESSMENT "
+        "COM ORQUESTRADOR ==="
+    )
+
+    orchestrator = AssessmentOrchestrator()
+
+    assessment = orchestrator.execute(
+        job_document,
+        resume_document,
+    )
+
+    print(
+        "\n=== ASSESSMENT GERADO ==="
+    )
+
+    print(
+        f"Candidato: "
+        f"{assessment.candidate_name}"
+    )
+
+    print(
+        f"Vaga: "
+        f"{assessment.job_title}"
+    )
+
+    print(
+        f"Aderência documental: "
+        f"{assessment.adherence_percentage:.2f}%"
+    )
+
+    print_questions(
+        assessment
+    )
+
+    print_risks(
+        assessment
+    )
+
+    print_interviewer_comments(
+        assessment
+    )
+
+    print_recommendation(
+        assessment
+    )
+
+    print_separator()
+
+    print(
+        "\n=== TESTE REAL DO "
+        "ASSESSMENT ORCHESTRATOR CONCLUÍDO ==="
+    )
+
+
 if __name__ == "__main__":
     main()
-

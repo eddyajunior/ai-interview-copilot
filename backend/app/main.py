@@ -1,10 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api.assessments import router as assessments_router
+
 
 app = FastAPI(
     title="AI Interview Copilot API",
-    version="0.1.0"
+    version="0.5.0",
 )
 
 
@@ -19,10 +21,15 @@ app.add_middleware(
 )
 
 
+app.include_router(
+    assessments_router
+)
+
+
 @app.get("/health")
 def health_check():
     return {
         "status": "ok",
         "service": "ai-interview-copilot-api",
-        "version": "0.1.0"
+        "version": "0.5.0",
     }
