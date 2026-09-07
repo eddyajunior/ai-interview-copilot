@@ -17,12 +17,6 @@ class SkillType(str, Enum):
     TECHNOLOGY = "technology"
 
 
-# class RiskLevel(str, Enum):
-#     LOW = "low"
-#     MEDIUM = "medium"
-#     HIGH = "high"
-
-
 class ConfidenceLevel(str, Enum):
     LOW = "low"
     MEDIUM = "medium"
@@ -47,15 +41,6 @@ class SkillAssessment(BaseModel):
 
     status: str
 
-
-    # class RiskAssessment(BaseModel):
-    #     title: str
-    #     level: RiskLevel
-    #     description: str
-    #     evidence: List[Evidence] = Field(default_factory=list)
-    #     validation_question: str | None = None
-
-
 class Recommendation(BaseModel):
     short_term: str
     medium_term: str
@@ -64,7 +49,7 @@ class Recommendation(BaseModel):
 
 class CandidateAssessment(BaseModel):
     candidate_name: str | None = None
-    job_title: str
+    job_title: str = Field(min_length=1)  
 
     summary: str
 
@@ -92,3 +77,4 @@ class CandidateAssessment(BaseModel):
         "entre currículo e requisitos da vaga"
     ),
 )
+

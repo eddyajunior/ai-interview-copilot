@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.assessments import router as assessments_router
 
+from app.api.interview_sessions import (
+    router as interview_sessions_router,
+)
 
 app = FastAPI(
     title="AI Interview Copilot API",
@@ -21,9 +24,8 @@ app.add_middleware(
 )
 
 
-app.include_router(
-    assessments_router
-)
+app.include_router(assessments_router)
+app.include_router(interview_sessions_router)
 
 
 @app.get("/health")
