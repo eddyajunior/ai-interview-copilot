@@ -24,3 +24,6 @@ frontend/.next/
 
 # Logs
 *.log
+
+# Arquivos de sessões persistidas
+backend/data/interview_sessions/
