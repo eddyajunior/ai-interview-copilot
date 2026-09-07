@@ -97,3 +97,50 @@ export type CandidateAssessment = {
   interviewer_comments: string[];
   recommendation: Recommendation;
 };
+
+export type InterviewQuestionStatus =
+  | "pending"
+  | "asked"
+  | "skipped";
+
+export type InterviewResponseEvaluation =
+  | "not_evaluated"
+  | "below_expectation"
+  | "partially_meets"
+  | "meets"
+  | "exceeds";
+
+export type InterviewEvidenceStrength =
+  | "not_evaluated"
+  | "low"
+  | "medium"
+  | "high";
+
+export interface InterviewQuestionRecord {
+  question_index: number;
+  competency: string;
+  question: string;
+
+  status: InterviewQuestionStatus;
+
+  interviewer_notes: string | null;
+  response_summary: string | null;
+
+  evaluation: InterviewResponseEvaluation;
+
+  evidence_strength: InterviewEvidenceStrength;
+}
+
+export interface InterviewSession {
+  session_id: string;
+
+  candidate_name: string | null;
+  job_title: string;
+
+  started_at: string | null;
+  completed_at: string | null;
+
+  questions: InterviewQuestionRecord[];
+
+  final_notes: string | null;
+}

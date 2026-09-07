@@ -1,6 +1,46 @@
-import { CandidateAssessment } from "@/types/assessment";
+import { 
+  CandidateAssessment,
+  InterviewSession,
+} from "@/types/assessment";
 
 const API_BASE_URL = "http://127.0.0.1:8000";
+
+export async function createInterviewSession(
+  assessment: CandidateAssessment,
+): Promise<InterviewSession> {
+  const response = await fetch(
+    `${API_BASE_URL}/api/v1/interview-sessions`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(assessment),
+    },
+  );
+
+  if (!response.ok) {
+    let message =
+      "Não foi possível iniciar a entrevista.";
+
+    try {
+      const body = await response.json();
+
+      if (
+        typeof body?.detail === "string" &&
+        body.detail.trim()
+      ) {
+        message = body.detail;
+      }
+    } catch {
+      // Mantém mensagem genérica.
+    }
+
+    throw new Error(message);
+  }
+
+  return response.json();
+}
 
 export type HealthResponse = {
   status: string;
@@ -70,6 +110,43 @@ export async function createAssessment(
   if (!response.ok) {
     const message =
       await getErrorMessage(response);
+
+    throw new Error(message);
+  }
+
+  return response.json();
+}
+
+export async function updateInterviewSession(
+  session: InterviewSession,
+): Promise<InterviewSession> {
+  const response = await fetch(
+    `${API_BASE_URL}/api/v1/interview-sessions/${session.session_id}`,
+    {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(session),
+    },
+  );
+
+  if (!response.ok) {
+    let message =
+      "Não foi possível salvar a entrevista.";
+
+    try {
+      const body = await response.json();
+
+      if (
+        typeof body?.detail === "string" &&
+        body.detail.trim()
+      ) {
+        message = body.detail;
+      }
+    } catch {
+      // Mantém mensagem genérica.
+    }
 
     throw new Error(message);
   }
